@@ -42,4 +42,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * Un user a plusieurs liens
+     */
+    public function links(){
+        return $this->hasMany(Link::class);
+    }
 }
